@@ -1,0 +1,28 @@
+virtual environment creation/recreation instructions for Anaconda
+
+
+To use these files to create an identical environment run this in cmd propmt:
+conda create --name myenv --file spec-file.txt
+
+To use the spec files to install its listed packages into an already existing environment, run this in cmd prompt:
+conda install --name myenv --file spec-file.txt
+
+Example:
+conda create --name testVenv --file "\\centerstone.lan\ent\GroupDrive\Angus_Shared\Python Projects\Virtual Environment Files\BaseVenvSpec-file.txt"
+
+
+
+
+How to create these spec files:
+open up cmd then change to what directory you want the txt file in
+(pushd \\centerstone.lan\ent\GroupDr... to changed directory to mapped drive )
+
+activate which virtual environment you want to export the module settings.  (in windows: "activate VenvName")
+
+then run:
+conda list --explicit > spec-file.txt
+
+(to get out of an activated Venv, just type "deactivate" in cmd)
+
+Done!
+
